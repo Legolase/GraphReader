@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/resorse">
+        <file>Image/icon.png</file>
+        <file>Image/binoculars.png</file>
+        <file>Image/exit.png</file>
+    </qresource>
+</RCC>
