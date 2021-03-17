@@ -14,16 +14,21 @@ RC_FILE = linkico.rc
 
 SOURCES += \
     Panel.cpp \
+    SensorData.cpp \
+    mainwindow.cpp \
     qcustomplot.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     Panel.h \
+    SensorData.h \
+    mainwindow.h \
     qcustomplot.h \
     mainwindow.h
 
 FORMS += \
+    mainwindow.ui \
     mainwindow.ui
 
 TRANSLATIONS += \

@@ -3,8 +3,11 @@
 
 #include <QMainWindow>
 #include <QWidget>
+#include <QLabel>
 #include <QStatusBar>
+#include <QVector>
 #include "qcustomplot.h"
+#include "SensorData.h"
 
 class Panel : public QMainWindow {
 public:
@@ -13,20 +16,18 @@ public:
 private:
     QCustomPlot* graf;
     QCPItemTracer* tracer;
+    SensorData sensor;
+    QLabel* gases, *heit;
+    QLineEdit* ln;
 
 public slots:
     void setgraph();
-    void checkBar(const QString&);
     //void pressTracer(QMouseEvent* event);
     void moveTracer(QMouseEvent* event);
+    void pressMouse(QMouseEvent* event);
 
 private:
     //functions
-    bool right_line(const QString& line);
-    QStringList get_lines(const QString& path);
-    QVector<QVector<double>> Parser(const QStringList& lines);
-    QVector<double> getY(const QVector<QVector<double>>& dates, const bool mode = 0);
-    QVector<double> getX(const QVector<QVector<double>>& dates);
     double maxpoint(const QVector<double>& y);
 };
 
